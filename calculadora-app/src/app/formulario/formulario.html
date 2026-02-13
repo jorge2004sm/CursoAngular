@@ -1,0 +1,11 @@
+<div class="d-flex flex-column align-items-center">
+    <div class="d-flex flex-row align-items-center mb-3">
+        <label for="operandoA" class="me-2">Operando A</label>
+        <input type="number" id="operandoA" class="form-control text-center" name="operandoA" [(ngModel)] = "operandoA">
+    </div>
+    <div class="d-flex flex-row align-items-center mb-3">
+        <label for="operandoB" class="me-2">Operando B</label>
+        <input type="number" id="operandoB" class="form-control text-center" name="operandoB" [(ngModel)] = "operandoB">
+    </div>
+    <button class="btn btn-primary" (click)="sumarNumeros()">Sumar</button>
+</div>

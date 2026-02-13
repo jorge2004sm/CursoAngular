@@ -1,0 +1,18 @@
+<div class="col-md-9">
+    <h2 class="text-center text-danger">Gastos</h2>
+    <ul class="list-group mt-3">
+
+        @for(gasto of gastos; track gasto){
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span class="flex-grow-1">{{gasto.descripcion}}</span>
+            <span class="d-flex align-items-center mx-3">
+                <span class="text-danger">- {{gasto.valor | currency: 'EUR'}}</span>
+                <span class="badge bg-success ms-2">{{calcularPorcentaje(gasto) | percent}}</span>
+            </span>
+            <button class="btn btn-sm btn-danger" (click)="eliminarGasto(gasto)">
+                <i class="bi bi-x-circle"></i> <!-- Bootstrap Icon -->
+            </button>
+        </li>
+        }
+    </ul>
+</div>
