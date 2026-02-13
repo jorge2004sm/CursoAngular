@@ -19,6 +19,10 @@ export class ListadoProductos {
     
   }
 
+  ngOnInit(){
+    this.productos = this.productoService.productos
+  }
+
   agregarProducto(){
     this.router.navigate(['agregar'])
   }

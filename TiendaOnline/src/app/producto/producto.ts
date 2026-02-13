@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-producto',
-  imports: [ProductoModel],
+  imports: [],
   templateUrl: './producto.html',
   styleUrl: './producto.css',
 })

@@ -1,7 +1,7 @@
 <div class="container d-flex justify-content-center my-3 border">
     <div class="my-3 mx-3 d-flex">
-        <p class="mx-2">Descripcion {{producto.descripcion}}</p>
-        <p>Precio {{producto.precio}}€</p>
+        <p class="mx-2">{{producto.descripcion}}, </p>
+        <p>{{producto.precio}}€</p>
     </div>
     <button type="submit" class="btn btn-info ms-4 my-3" (click)="editarProducto(producto.id!)">Editar Producto</button>
 </div>
