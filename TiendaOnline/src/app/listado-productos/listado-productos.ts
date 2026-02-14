@@ -13,14 +13,18 @@ import { Router } from '@angular/router';
   styleUrl: './listado-productos.css',
 })
 export class ListadoProductos {
-  productos: ProductoModel[] = [];
+  productos: {[llave: string]: Producto} = {};
 
   constructor(private productoService: ProductoService, private router: Router){
     
   }
 
   ngOnInit(){
-    this.productos = this.productoService.productos
+    this.cargarProductos();
+  }
+
+  cargarProductos(){
+    
   }
 
   agregarProducto(){
