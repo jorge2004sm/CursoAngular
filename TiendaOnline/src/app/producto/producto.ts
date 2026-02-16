@@ -12,12 +12,15 @@ import { Router } from '@angular/router';
 export class Producto {
 
   @Input() producto!: ProductoModel;
+  @Input() llave!: string; 
+
+
   constructor(private router: Router) {
   }
 
-  editarProducto(id: number) {
+  editarProducto() {
     // Pasamos el ID  en la url
-    this.router.navigate(['/editar', id])
+    this.router.navigate(['/editar', this.llave])
   }
 
 }
