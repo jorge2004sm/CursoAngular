@@ -17,7 +17,12 @@ export class DatosService {
     return this.httpClient.get<{[llave: string]: ProductoModel}>(this.url + 'datos.json')
   }
 
-  guardarProducto(producto: ProductoModel): Observable<any>{
+  agregarProducto(producto: ProductoModel): Observable<any>{
     return this.httpClient.post(`${this.url}datos.json`, producto)
+  }
+
+  modificarProducto(producto: ProductoModel, llave: string): Observable<any>{
+    const url_modificar = `${this.url}datos/${llave}.json`;
+    return this.httpClient.put(url_modificar, producto)
   }
 }

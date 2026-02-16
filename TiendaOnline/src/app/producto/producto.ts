@@ -2,10 +2,11 @@ import { Component, Input } from '@angular/core';
 import { ProductoModel } from './producto.model';
 import { ProductoService } from '../producto-service';
 import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-producto',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './producto.html',
   styleUrl: './producto.css',
 })
