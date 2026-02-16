@@ -16,4 +16,8 @@ export class DatosService {
   listarProductos(): Observable<{[llave: string]: ProductoModel}>{
     return this.httpClient.get<{[llave: string]: ProductoModel}>(this.url + 'datos.json')
   }
+
+  guardarProducto(producto: ProductoModel): Observable<any>{
+    return this.httpClient.post(`${this.url}datos.json`, producto)
+  }
 }

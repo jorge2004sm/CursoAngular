@@ -43,7 +43,7 @@ export class Formulario {
 
     const producto = new ProductoModel(this.descripcionInput, this.precioInput)
 
-    this.productoService.guardarProducto(producto)
+    this.productoService.guardarProducto(producto, this.llaveProducto)
 
     this.limpiarFormulario()
 

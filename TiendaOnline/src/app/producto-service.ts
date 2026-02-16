@@ -7,35 +7,31 @@ import { DatosService } from './datos-service';
 })
 export class ProductoService {
 
-  productos: {[llave: string]: ProductoModel} = {};
+  productos: { [llave: string]: ProductoModel } = {};
 
   constructor(private datosService: DatosService) {
-    
+
   }
 
-  listarProductos(){
-    return this.datosService.listarProductos
+  listarProductos() {
+    return this.datosService.listarProductos()
   }
 
-  guardarProducto(producto: ProductoModel) {
-    // if(producto.id === null){ // Caso agregar producto
-    //   producto.id === this.idSiguiente++;
-    //   this.productos.push(producto)
-    // } else { // Actualizar producto, si el producto tiene un id lo actualizamos
-    //   const indice = this.productos.findIndex(p => p.id === producto.id)
-    //   if(indice !== -1){
-    //     this.productos[indice] = producto 
-    //   }
-    // }
+  guardarProducto(producto: ProductoModel, llave: string | null = null) {
+    if(llave === null){
+      this.datosService.guardarProducto(producto).subscribe(() => {
+        console.log('Se agrego el nuevo producto' + producto.descripcion + producto.precio)
+      });
+    }
   }
 
 
-  getProductoByLlave(llave: string): ProductoModel | undefined{
+  getProductoByLlave(llave: string): ProductoModel | undefined {
     return undefined
     // return this.productos.find(producto => producto.id === id);
   }
 
-  eliminarProducto(id: number){
+  eliminarProducto(id: number) {
     // const indice = this.productos.findIndex(producto => producto.id === id);
     // if(indice !== -1){
     //   this.productos.splice(indice, 1);

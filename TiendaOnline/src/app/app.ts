@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
-import { ListadoProductos } from './listado-productos/listado-productos';
 import { RouterOutlet } from '@angular/router';
+import { ListadoProductos } from './listado-productos/listado-productos';
 
 @Component({
   selector: 'app-root',

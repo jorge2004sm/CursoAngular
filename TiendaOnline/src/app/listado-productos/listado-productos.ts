@@ -10,10 +10,10 @@ import { ProductoModel } from '../producto/producto.model';
   selector: 'app-listado-productos',
   standalone: true,
   imports: [Producto, FormsModule, Formulario],
-  templateUrl: './listado-productos.component.html',
-  styleUrl: './listado-productos.component.css'
+  templateUrl: './listado-productos.html',
+  styleUrl: './listado-productos.css'
 })
-export class ListadoProductosComponent {
+export class ListadoProductos {
 
   productos: {[llave:string]: ProductoModel} = {};
 

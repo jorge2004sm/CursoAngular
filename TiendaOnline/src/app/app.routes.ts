@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
-import { ListadoProductos } from './listado-productos/listado-productos';
 import { Formulario } from './formulario/formulario';
 import { Error } from './error/error'
+import { ListadoProductos } from './listado-productos/listado-productos';
 
 export const routes: Routes = [
     {path: '', component: ListadoProductos},
