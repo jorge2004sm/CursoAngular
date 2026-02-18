@@ -1,0 +1,11 @@
+<div class="card">
+    <h4>Producto {{nombre()}}</h4>
+
+    @if (cantidad() <= 0){ <p style="color: red">Agotado {{cantidad()}}</p>
+        } @else if(cantidad() > 0 && cantidad() <= 5){ <p style="color: yellow">Solo quedan {{cantidad()}} unidades</p>
+            } @else {
+            <p style="color: green">Quedan {{cantidad()}} unidades</p>
+            }
+
+    <button (click)="comprobarEstado()">Notificar al almacen</button>
+</div>
