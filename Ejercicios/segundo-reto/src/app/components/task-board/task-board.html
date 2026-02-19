@@ -1,0 +1,10 @@
+<div class="board-container text-center">
+  <h2>Mi Tablero de Tareas</h2>
+
+  @for (tarea of tasks; track tarea) {
+    <app-task-card 
+      [task]="tarea" 
+      (completeTask)="onTaskCompleted($event)">
+    </app-task-card>
+  }
+</div>
