@@ -7,8 +7,8 @@
     @for (cliente of clientesMigrados(); track cliente.id) {
       <div class="card">
         <h3>{{ cliente.nombre }}</h3>
-        <p>Estado: {{ cliente.activo ? '✅ Al día' : '⚠️ Pendiente' }}</p>
-        <small>Última entrada: {{ cliente.ultimaConexion }}</small>
+        <p>Estado: {{ cliente.apellido }}</p>
+        <small>Última entrada: {{ cliente.telefono }}</small>
       </div>
     } @empty {
       <p>Pulsa el botón para iniciar la migración.</p>
