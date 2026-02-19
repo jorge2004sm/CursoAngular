@@ -28,6 +28,8 @@ export class App {
 
  nombreProducto = ''
 
+ pruebaPadre = 'Juan'
+
 
  // CON SERVICIOS-----------------------
 

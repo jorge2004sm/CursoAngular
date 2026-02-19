@@ -12,6 +12,8 @@ export class Hijo {
   // @Input() cantidad: number = 0
   @Input() nombreProducto: string = ''
 
+  @Input() nombreHijo: string = ''
+
 
   @Output() avisoCritico = new EventEmitter<string>()
 
