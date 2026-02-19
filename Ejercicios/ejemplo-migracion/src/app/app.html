@@ -1,0 +1,17 @@
+<div class="p-4">
+  <button (click)="alClicarMigrar()" class="btn-migrar">
+    🚀 Sincronizar Clientes Legacy
+  </button>
+
+  <div class="grid">
+    @for (cliente of clientesMigrados(); track cliente.id) {
+      <div class="card">
+        <h3>{{ cliente.nombre }}</h3>
+        <p>Estado: {{ cliente.apellido }}</p>
+        <small>Última entrada: {{ cliente.telefono }}</small>
+      </div>
+    } @empty {
+      <p>Pulsa el botón para iniciar la migración.</p>
+    }
+  </div>
+</div>
